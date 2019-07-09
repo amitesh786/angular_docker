@@ -1,0 +1,33 @@
+<div class="{{ loading ? 'd-none' : 'd-block hoverTable'}}">
+    <p-toast [style]="{ marginTop: '80px'}" ></p-toast>
+
+    <p-table [value]="taskSummary">
+        <ng-template pTemplate="header">
+            <tr>
+                <th>Vin</th>
+                <th>Year</th>
+                <th>Brand</th>
+                <th>Color</th>
+                <th *ngIf="isVisibleAction" style="width: 5.5rem">Actions</th>
+            </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-task>
+            <tr>
+                <td>{{task.vin}}</td>
+                <td>{{task.year}}</td>
+                <td>{{task.brand}}</td>
+                <td>{{task.color}}</td>
+
+                <td *ngIf="isVisibleAction">
+                    <p-menu #menu [popup]="true" [model]="getMenuItemsForItem(task)" appendTo="body"></p-menu>
+                    <button pButton (click)="menu.toggle($event)" icon="fa fa-ellipsis-v"></button>
+                </td>
+            </tr>
+        </ng-template>
+    </p-table>
+    <!-- <p-paginator [rows]="10" [totalRecords]="totalRecords ? totalRecords : 100" [rowsPerPageOptions]="[10,25,50]" (onPageChange)="paginateTaskList($event)">
+    </p-paginator> -->
+    
+</div>
+
+<i class="{{ loading ? 'loading' : 'd-none'}}"  ></i>

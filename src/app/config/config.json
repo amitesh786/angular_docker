@@ -1,0 +1,12 @@
+{
+    "users" : [
+        {
+            "id": 1,
+            "username": "username",
+            "password": "password",
+            "firstName": "User",
+            "lastName": "User",
+            "token": ""
+        }
+    ]  
+}

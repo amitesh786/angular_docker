@@ -1,0 +1,60 @@
+<app-header
+    [navbarBrandRouterLink]="['/dashboard']"
+    [fixed]="true"
+    [navbarBrandFull]="{src: 'assets/img/brand/logo.png', width: 89, height: 25, alt: 'Docker Logo'}"
+    [navbarBrandMinimized]="{src: 'assets/img/brand/sygnet.svg', width: 30, height: 30, alt: 'Docker Logo'}"
+    [sidebarToggler]="'lg'"
+    [asideMenuToggler]="false"
+    >
+    
+    <!-- header title -->
+    <!-- <ul class="nav navbar-nav d-md-down-none">
+        <li class="nav-item px-3">
+          <a class="nav-link" href="#">Demo/Dashboard</a>
+        </li>
+    </ul> -->
+
+    <ul class="nav navbar-nav ml-auto">
+      <li class="nav-item dropdown" dropdown placement="bottom right">
+          
+          <a class="nav-link" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false" dropdownToggle (click)="false">
+            <img src="assets/img/avatars/6.jpg" class="img-avatar" alt="amitesh.jy.786@gmail.com"/>
+          </a>
+
+          <div class="dropdown-menu dropdown-menu-right" *dropdownMenu aria-labelledby="simple-dropdown">
+            <div class="dropdown-header text-center"><strong>Account</strong></div>
+            
+            <div class="divider"></div>
+            <a class="dropdown-item" (click)="logout()" ><i class="fa fa-lock"></i> Logout</a>
+          </div>
+      </li>
+
+    </ul>
+</app-header>
+
+<div class="app-body">
+
+    <app-sidebar [fixed]="true" [display]="'lg'">
+      <app-sidebar-nav [navItems]="navItems" [perfectScrollbar] [disabled]="sidebarMinimized"></app-sidebar-nav>
+      <!-- <app-sidebar-minimizer></app-sidebar-minimizer> -->
+    </app-sidebar>
+
+    <!-- Main content -->
+    <main class="main">
+        <!-- Breadcrumb -->
+        <!-- breaking change 'cui-breadcrumb' -->
+        <cui-breadcrumb></cui-breadcrumb>
+        
+        <!-- App filter -->
+        <div class="container-fluid">
+            <router-outlet></router-outlet>
+        </div>
+        <!-- /.container-fluid -->
+    </main>
+</div>
+
+<!-- app footer container -->
+<app-footer>
+    <span><a target="blank" href="https://github.com/amitesh786">GitHub</a> &copy; 2019 Copyright.</span>
+    <span class="ml-auto">Powered by <a target="blank" href="https://www.linkedin.com/in/asingh23091990/">LinkedIn</a></span>
+</app-footer>
