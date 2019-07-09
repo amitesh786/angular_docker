@@ -55,13 +55,13 @@ export class TaskComponent implements OnInit, OnDestroy {
 
         let menu = [];        
         menu = [].concat(
-                {   
-                    id: "1",
-                    label: 'Open',
-                    icon: 'fa fa-wrench',
-                    // command: e => { this.fnTaskClaim(data) }
-                }
-            );
+            {   
+                id: "1",
+                label: 'Open',
+                icon: 'fa fa-wrench',
+                // command: e => { this.fnTaskClaim(data) }
+            }
+        );
         return menu;
     }
 
