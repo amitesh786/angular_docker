@@ -3,7 +3,7 @@
 
     <p-table [value]="taskSummary">
         <ng-template pTemplate="header">
-            <tr>
+            <tr class="text-center">
                 <th>Vin</th>
                 <th>Year</th>
                 <th>Brand</th>
@@ -12,7 +12,7 @@
             </tr>
         </ng-template>
         <ng-template pTemplate="body" let-task>
-            <tr>
+            <tr class="text-center">
                 <td>{{task.vin}}</td>
                 <td>{{task.year}}</td>
                 <td>{{task.brand}}</td>

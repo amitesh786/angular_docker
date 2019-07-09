@@ -54,7 +54,7 @@ export class ConfigUserService {
         let authorizationData = `${currentUser.token}`
         let headers = new HttpHeaders({
             'Content-Type': 'application/json',
-            Authorization: authorizationData
+            // Authorization: authorizationData
         });
         return headers;
     }

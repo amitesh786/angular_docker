@@ -1,17 +1,17 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { GlobalVariable } from '../globals/global'
 import { Observable } from 'rxjs';
-import { TaskSummary } from '../models';
+
+const configJson = require('../data/jsonRes.json');
 
 @Injectable({
     providedIn: 'root'
 })
 export class TaskRestService {
 
-    constructor(private http: HttpClient) { }
+    constructor() { }
 
-    getTaskData(): Observable<any> {
-        return this.http.get<TaskSummary[]>(`${GlobalVariable.baseUrl}/assets/showcase/data/cars-small.json`);
+    getTaskData() {
+        return configJson.data;
     }    
 }

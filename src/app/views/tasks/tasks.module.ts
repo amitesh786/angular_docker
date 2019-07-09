@@ -27,7 +27,6 @@ import { CheckboxModule } from 'primeng/checkbox';
 // Message on right corner
 import { ToastModule } from 'primeng/toast';
 import { PaginatorModule } from 'primeng/paginator';
-import { FilterComponent } from '../../views/filtering/filtering.component';
 
 @NgModule({
     imports: [
@@ -46,8 +45,7 @@ import { FilterComponent } from '../../views/filtering/filtering.component';
         CheckboxModule
     ],
     declarations: [
-        TaskComponent,
-        FilterComponent
+        TaskComponent
     ]
 })
 export class TaskDeskModule { }

@@ -124,7 +124,7 @@ export class FakeBackendInterceptor implements HttpInterceptor {
         }
 
         function isLoggedIn() {
-            return credentialUser && headers.get('Authorization') === credentialUser.token;
+            return credentialUser; //  && headers.get('Authorization') === credentialUser.token;
         }
 
         function generateToken() {
