@@ -46,8 +46,10 @@ export class TaskComponent implements OnInit, OnDestroy {
 
         if (this.taskSummary && this.taskSummary.length > 0) {
             this.loading = false;
+            this.totalRecords = this.taskSummary.length;
         }
     }
+    
 
     getMenuItemsForItem(data: TaskSummary): MenuItem[] {
 

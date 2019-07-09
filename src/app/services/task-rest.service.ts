@@ -13,5 +13,5 @@ export class TaskRestService {
 
     getTaskData() {
         return configJson.data;
-    }    
+    }
 }
