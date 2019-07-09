@@ -1,0 +1,8 @@
+{
+    "/primeng": {
+        "target": "https://www.primefaces.org",
+        "secure": false,
+        "logLevel": "debug",
+        "changeOrigin": true
+    }
+}
