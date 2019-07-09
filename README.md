@@ -1,8 +1,9 @@
 # Angular Docker Nginx
 
-This project was generated with [angular-cli](https://github.com/angular/angular-cli) version 1.0.0-beta.25.5.
+This project was generated with [angular-cli](https://github.com/angular/angular-cli) version 8.1.0
 
 ## Development server
+
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
 ## Code scaffolding
@@ -21,3 +22,26 @@ Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.
 
 Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
 Before running the tests make sure you are serving the app via `ng serve`.
+
+## Dependencies
+
+The example code uses apps built with [Angular-CLI](https://github.com/angular/angular-cli). 
+
+To create Docker images and containers, you'll need [Docker](https://www.docker.com/).
+
+## Structure
+
+`angular_docker_nginx` provides a base Angular application with simple Dockerfile and default.conf for nginx 
+to create a container that will serve up the Angular app.
+
+`angular_docker_nginx` provides and update conf file to proxy all calls to `/` to another server
+
+## Docker
+
+# Build Docker Image
+
+Run `docker build -t ${name_docker_image} .` to build the docker image.
+
+# Docker port
+
+Run `docker run -p 4200:4200 ${name_docker_image}` navigate to `http://localhost:4200/` the app will start.
