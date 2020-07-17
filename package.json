@@ -46,7 +46,7 @@
         "jquery": "3.4.1",
         "json-server": "0.15.0",
         "karma-remap-istanbul": "0.6.0",
-        "lodash": "4.17.11",
+        "lodash": "4.17.19",
         "mutationobserver-shim": "0.3.3",
         "ng2-charts": "2.3.0",
         "ngx-bootstrap": "5.0.0",
